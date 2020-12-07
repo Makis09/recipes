@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { getAllRecipeIds, getRecipeData } from "../lib/recipes";
+import { getAllRecipeIds, getRecipeData } from "../utils/recipes";
 import Link from "next/Link";
 
-export default function meo(props) {
+export default function recipe(props) {
   return (
     <div>
       <Head>
@@ -31,7 +31,7 @@ export default function meo(props) {
   );
 }
 export async function getStaticPaths() {
-  const paths = getAllRecipeIds();
+  const paths = await getAllRecipeIds();
   return {
     paths,
     fallback: false,
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const recipeData = getRecipeData(params.recipe);
+  const recipeData = await getRecipeData(params.recipe);
   return {
     props: {
       recipeData,
