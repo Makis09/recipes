@@ -16,7 +16,6 @@ export async function getAllRecipeIds() {
 
 export async function getRecipeData(id) {
   const { db } = await connectToDatabase();
-  console.log(id);
   let query = id.split("&&")[1];
 
   const o_id = new mongo.ObjectID(query);
