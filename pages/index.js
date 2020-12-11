@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/Link";
 import Image from "next/image";
-import { Grid, Button } from "@material-ui/core";
+import { Container, Grid, Button } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
 
 export default function Home(props) {
@@ -13,30 +13,33 @@ export default function Home(props) {
       </Head>
       <div>
         <h1>home</h1>
-        <Grid container spacing={1}>
-          {props.allRecipes.map((recipe) => {
-            return (
-              <Grid container key={recipe.name} item xs={4}>
-                <Link
-                  href={`/${
-                    recipe.name.toLowerCase().replace(/\s/g, "-") +
-                    "&&" +
-                    recipe._id
-                  }`}
-                >
-                  <a>{recipe.name}</a>
-                </Link>
-                <Image
-                  src={`/../static/images/${recipe.name}.jpg`}
-                  alt={recipe.name}
-                  width="300"
-                  height="200"
-                />
-                <Button variant="contained">Default</Button>
-              </Grid>
-            );
-          })}
-        </Grid>
+        <Container>
+          <Grid container spacing={2}>
+            {props.allRecipes.map((recipe) => {
+              return (
+                <Grid container item key={recipe.name} xs={4}>
+                  <Link
+                    style={{ display: "block" }}
+                    href={`/${
+                      recipe.name.toLowerCase().replace(/\s/g, "-") +
+                      "&&" +
+                      recipe._id
+                    }`}
+                  >
+                    <a>{recipe.name}</a>
+                  </Link>
+                  <Image
+                    src={`/../static/images/${recipe.name}.jpg`}
+                    alt={recipe.name}
+                    width="300"
+                    height="200"
+                  />
+                  <Button variant="contained">Default</Button>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Container>
       </div>
     </div>
   );
