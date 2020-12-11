@@ -11,13 +11,14 @@ export default function recipe(props) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header>{props.recipeData.name}</Header>
+      
       <Image
         src={`/../static/images/${props.recipeData.name}.jpg`}
         alt={recipe.name}
         width={700}
         height={500}
       />
+      <Header>{props.recipeData.name}</Header>
       <h4>Preparation</h4>
       <ul>
         {props.recipeData.instructions.map((instruction) => {
