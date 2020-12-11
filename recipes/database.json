@@ -1,96 +1,5 @@
 [
   {
-    "name": "Chicken Thighs With Tomatoes and Feta",
-    "servings": "4",
-    "prepTime": "/",
-    "ingredients": [
-      "6 skin-on, bone-in chicken thighs (about 2¼ lb. total)",
-      "½ tsp. kosher salt, plus more",
-      "1¼ lb. cherry tomatoes (about 2 pints)",
-      "¼ cup harissa paste",
-      "3 Tbsp. red wine vinegar",
-      "3 sprigs oregano, divided",
-      "4 oz. feta, cut into (¼\"-thick) planks",
-      "Crusty bread (for serving)"
-    ],
-    "instructions": [
-      "Pat chicken thighs dry with paper towels; season all over with salt. Arrange skin side down in a cold large cast-iron skillet. Set over medium heat and cook chicken, undisturbed, rotating pan as needed for even browning, until skin is very deep golden brown and crisp and chicken releases easily from pan, 13–16 minutes. Using tongs, transfer chicken to a plate, arranging skin side up.",
-      "Combine tomatoes, harissa paste, vinegar, 1 oregano sprig, and ½ tsp. salt in same skillet. Increase heat to medium-high and cook, stirring occasionally, until tomatoes burst and their juices start to thicken, 8–10 minutes.",
-      "Nestle chicken thighs into tomatoes, skin side up. Reduce heat to medium-low, bring to a simmer, and cook until chicken is just cooked through and flesh is no longer pink (an instant-read thermometer inserted into the thickest part near the bone will register 165°F), and tomato sauce is thickened so that a wooden spoon dragged through it leaves a trail, 6–8 minutes. Remove from heat and let sit 5 minutes.",
-      "Break feta into large pieces; scatter over chicken. Some pieces will stay intact while others will soften into the sauce a little—and that's exactly what you want. Pick leaves off remaining 2 oregano sprigs and scatter on top",
-      "Serve with bread for sopping up any extra tomato sauce."
-    ],
-    "tags": [
-      "BON APPÉTIT",
-      "DINNER",
-      "POULTRY",
-      "CHICKEN",
-      "TOMATO",
-      "FETA",
-      "OREGANO",
-      "VINEGAR",
-      "CAST IRON",
-      "MEDITERRANEAN",
-      "SOY FREE",
-      "TREE NUT FREE",
-      "PEANUT FREE",
-      "KID-FRIENDLY",
-      "QUICK & EASY"
-    ]
-  },
-  {
-    "name": "Sausage and Ricotta Baked Cannelloni",
-    "servings": "8 servings",
-    "prepTime": "/",
-    "ingredients": [
-      "6 Tbsp. unsalted butter",
-      "3 Tbsp. all-purpose flour",
-      "3 cups whole milk",
-      "1 oz. Parmesan, grated (about 1/2 cup)",
-      "Pinch of cayenne pepper",
-      "Pinch of ground nutmeg",
-      "Kosher salt",
-      "2 bunches green Swiss chard",
-      "3 Tbsp. extra-virgin olive oil",
-      "1 lb. sweet Italian sausage, casings removed",
-      "1 lb. whole-milk fresh ricotta",
-      "Kosher salt",
-      "1 lb. fresh pasta sheets (about 16 (6x4') pieces) or 12 oz. dried jumbo shells (about 30)",
-      "2 cups store-bought marinara sauce",
-      "Grated Parmesan (for sprinkling)"
-    ],
-    "instructions": [
-      "Béchamel bold",
-      "Melt butter in a medium saucepan over medium heat. Whisk in flour and cook, whisking occasionally, until mixture smells slightly nutty, about 3 minutes. Whisk in milk, then increase heat to medium-high, and still whisking constantly, bring to a simmer. Reduce heat to maintain a simmer and cook just until thick and no longer floury tasting, 8–10 minutes. Add Parmesan and whisk until melted, then whisk in cayenne and nutmeg; season with salt. Cover béchamel and keep warm until ready to use.",
-      "Do Ahead bold",
-      "Béchamel can be made 3 days ahead. Let cool; cover and chill. Reheat over medium-low, whisking constantly and adding a splash of water if needed to loosen.",
-      "Assembly bold",
-      "Remove ribs and stems from Swiss chard leaves and thinly slice. Tear leaves into large pieces. Combine oil and sausage with Swiss chard ribs and stems in a large skillet and set over medium-high heat. Cook, breaking up sausage with a heatproof rubber spatula or wooden spoon into small pieces, until sausage is almost cooked through, 5–7 minutes.",
-      "Add Swiss chard leaves to skillet a handful at a time, tossing and letting them wilt slightly between additions, until all the leaves have been added. Cook, reducing heat as needed (liquid should be bubbling slightly at this point), until liquid is almost completely evaporated (it’s important to dry out the Swiss chard here so the filling isn’t soggy), about 5 minutes. Transfer to a large bowl. Let cool 5 minutes, then stir in ricotta. Season filling with salt.",
-      "If using pasta sheets, cook in a pot of boiling salted water 1 minute. Transfer to a large bowl of cold water. Lay out a row of pasta sheets on a rimmed baking sheet (don’t overlap), then top with a sheet of waxed or parchment paper. Repeat with remaining pasta sheets, placing sheets of paper between each layer.",
-      "If using shells, cook in a pot of boiling salted water, stirring occasionally, just until very al dente, about 3 minutes less than package instructions; rinse under cold water to cool quickly.",
-      "Preheat oven to 375°F. Spread half of béchamel into a 13x9' baking dish. If using pasta sheets lay out a sheet on a clean surface with a short end facing you. Spoon a heaping ¼-cupful of filling so it runs all the way down the center. Roll pasta around filling to create a 1 1-4'-diameter tube (the pasta will overlap quite a bit). Repeat with remaining pasta sheets, arranging in baking dish as you go to create 2 rows. If using shells, spoon a heaping tablespoonful of filling into each shell and nestle next to each other to create rows (you’ll have about 5 rows of 6 shells each). Spread remaining béchamel over cannelloni, then marinara sauce. Top with Parmesan.",
-      "Bake cannelloni until edges of pasta are lightly browned and sauce is bubbling around edges of pan, 30–40 minutes."
-    ],
-    "tags": [
-      "BON APPÉTIT",
-      "DINNER",
-      "ITALIAN",
-      "ITALIAN AMERICAN",
-      "PASTA",
-      "TOMATO",
-      "MILK/CREAM",
-      "CHEESE",
-      "CHARD",
-      "SAUSAGE",
-      "PORK",
-      "RICOTTA",
-      "SOY FREE",
-      "PEANUT FREE",
-      "TREE NUT FREE"
-    ]
-  },
-  {
     "name": "Ragù Bolognese",
     "servings": "/",
     "prepTime": "/",
@@ -108,12 +17,12 @@
       "½ cup dry white wine",
       "1 cup whole milk, hot",
       "One 28-ounce can tomato purée",
-      "1 cup chicken or beef stock",
+      "1 cup chicken or beef stock"
     ],
     "instructions": [
       "Heat the butter and oil together in a heavy large pot over medium heat. Add the onions, celery, and carrots and cook, stirring often with a wooden spoon, until the vegetables have softened and the onions are translucent, 5–10 minutes. Stir in the prosciutto. Add the ground chuck and pork, season to taste with salt and pepper, and cook, breaking up the clumps of meat with the back of the spoon, until the meat is no longer pink, 5–10 minutes. Avoid frying or browning the meat.",
       "Season the meat with nutmeg. Add the wine to the pot and cook until evaporated, 10–12 minutes. Reduce the heat to medium-low. Add the milk and cook, stirring occasionally, until absorbed, about 20 minutes.",
-      "Meanwhile, heat the tomato purée and stock together in a saucepan until hot, then add it to the meat. Reduce the heat to low and gently simmer, stirring occasionally, until the meat is tender, 5–7 hours. Add water if needed to keep the ragù loose and saucy. Season with salt and pepper.",
+      "Meanwhile, heat the tomato purée and stock together in a saucepan until hot, then add it to the meat. Reduce the heat to low and gently simmer, stirring occasionally, until the meat is tender, 5–7 hours. Add water if needed to keep the ragù loose and saucy. Season with salt and pepper."
     ],
     "tags": [
       "COOKBOOKS",
@@ -263,14 +172,7 @@
       "Add the heavy cream and simmer for 20 minutes. Remove from the heat. Place the remaining 1 tablespoon of oil in the bottom of a large pasta serving bowl. Add some of the pasta to the bowl and the a few ladles of the sauce. Continue layering the pasta and sauce into the bowl until all has been transferred to the serving bowl. Using tongs or 2 large forks, integrate the sauce into the pasta. Taste and season further with the salt. Continue to toss until well combined.",
       "Top with the mozzarella cheese and garnish with the basil. Season with the red pepper flakes and serve hot."
     ],
-    "tags": [
-      "PASTA",
-      "VODKA",
-      "TOMATO",
-      "MILK/CREAM",
-      "MOZZARELLA",
-      "BASIL"
-    ]
+    "tags": ["PASTA", "VODKA", "TOMATO", "MILK/CREAM", "MOZZARELLA", "BASIL"]
   },
   {
     "name": "Paccheri with Shellfish, Squid, and Tomatoes",
@@ -776,12 +678,7 @@
       "Fry the chilled potatoes again until golden brown and crispy, 4 to 5 minutes, working in batches and letting the fat regain its heat between each one. Use tongs or extra-long chopsticks to break the potatoes apart, if necessary, and turn them in the fat so that they brown evenly.",
       "With a slotted spoon, transfer the fries to a shallow bowl. Add the parsley and toss to mix. Season with salt and serve warm."
     ],
-    "tags": [
-      "FRY",
-      "POTATO",
-      "SIDE",
-      "PARSLEY"
-    ]
+    "tags": ["FRY", "POTATO", "SIDE", "PARSLEY"]
   },
   {
     "name": "Fried Potatoes with Tomato-Chipotle Sauce and Aïoli",
@@ -797,15 +694,15 @@
       "3 garlic cloves, finely chopped",
       "1/2 teaspoon ground coriander",
       "1 (28-ounce) can whole peeled tomatoes",
-       "1 1/2 pounds russet potatoes, scrubbed, cut into 1-inch pieces",
-       "Kosher salt",
-       "1 large egg yolk",
-       "1 garlic clove, finely grated",
-       "1 teaspoon red wine vinegar",
-       "3/4 cup grapeseed oil",
-       "Vegetable oil (for frying; about 8 cups)",
-       "3/4 teaspoon paprika",
-       "1/4 teaspoon ground cumin"
+      "1 1/2 pounds russet potatoes, scrubbed, cut into 1-inch pieces",
+      "Kosher salt",
+      "1 large egg yolk",
+      "1 garlic clove, finely grated",
+      "1 teaspoon red wine vinegar",
+      "3/4 cup grapeseed oil",
+      "Vegetable oil (for frying; about 8 cups)",
+      "3/4 teaspoon paprika",
+      "1/4 teaspoon ground cumin"
     ],
     "instructions": [
       "Make the sauce: bold",
@@ -930,13 +827,7 @@
       "Grill the potatoes over moderately high heat until dark brown grill marks form, about 5 minutes. Flip and grill until the potatoes are browned and completely tender, 4 to 5 minutes longer. Return the potatoes to the bowl.",
       "In another large bowl, mix the cornichons with the pickled onions, the vinegar, dill and the remaining 1/4 cup of oil. Add the potatoes, season with salt and pepper and toss well. Let stand for at least 10 minutes, then serve warm or at room temperature."
     ],
-    "tags": [
-      "SALAD",
-      "POTATO",
-      "GRILL",
-      "GRILL/BARBECUE",
-      "DILL"
-    ]
+    "tags": ["SALAD", "POTATO", "GRILL", "GRILL/BARBECUE", "DILL"]
   },
   {
     "name": "Red Hasselback Potatoes",
