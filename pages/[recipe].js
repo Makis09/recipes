@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { getAllRecipeIds, getRecipeData } from "../utils/recipes";
 import Link from "next/Link";
+import Header from "../components/Header/header";
 
 export default function recipe(props) {
   return (
@@ -10,7 +11,7 @@ export default function recipe(props) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>{props.recipeData.name}</h1>
+      <Header>{props.recipeData.name}</Header>
       <Image
         src={`/../static/images/${props.recipeData.name}.jpg`}
         alt={recipe.name}

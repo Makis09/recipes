@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/Link";
 import Image from "next/image";
-import css from "../styles/test.scss";
 import { Grid, Button } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
 
@@ -25,13 +24,13 @@ export default function Home(props) {
                     recipe._id
                   }`}
                 >
-                  <a className={css.test}>{recipe.name}</a>
+                  <a>{recipe.name}</a>
                 </Link>
                 <Image
                   src={`/../static/images/${recipe.name}.jpg`}
                   alt={recipe.name}
                   width="300"
-                  height="300"
+                  height="200"
                 />
                 <Button variant="contained">Default</Button>
               </Grid>
