@@ -3,7 +3,7 @@ import Link from "next/Link";
 import Image from "next/image";
 import { Container, Grid, Button } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
-
+import RecipeCard from "../components/recipeCard/recipeCard";
 export default function Home(props) {
   return (
     <div>
