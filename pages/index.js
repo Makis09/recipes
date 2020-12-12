@@ -3,47 +3,68 @@ import Link from "next/Link";
 import Image from "next/image";
 import { Container, Grid, Button } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
+
 import RecipeCard from "../components/recipeCard/recipeCard";
+
+import GetSingleFilter from "../components/Filters/singleFilter"
+
+
+
+
 export default function Home(props) {
   return (
-    <div>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <h1>home</h1>
-        <Container>
-          <Grid container spacing={2}>
-            {props.allRecipes.map((recipe) => {
-              return (
-                <Grid container item key={recipe.name} xs={4}>
-                  <Link
-                    style={{ display: "block" }}
-                    href={`/${
-                      recipe.name.toLowerCase().replace(/\s/g, "-") +
-                      "&&" +
-                      recipe._id
-                    }`}
-                  >
-                    <a>{recipe.name}</a>
-                  </Link>
-                  <Image
-                    src={`/../static/images/${recipe.name}.jpg`}
-                    alt={recipe.name}
-                    width="300"
-                    height="200"
-                  />
-                  <Button variant="contained">Default</Button>
-                </Grid>
-              );
-            })}
+
+      <Container>
+
+        {/* Navbar */}
+        {/* Carousel */}
+
+
+        <Grid container spacing={3}>
+
+          <Grid item md={2}>
+            {/* Advanced Filters */} <GetSingleFilter/>
           </Grid>
-        </Container>
-      </div>
-    </div>
+          <Grid item md={10} >
+            <Grid container spacing={3}>
+              {props.allRecipes.map((recipe) => {
+                return (
+                  <Grid item key={recipe.name} md={4} xs={4}>
+                    <Link
+                      style={{ display: "block" }}
+                      href={`/${recipe.name.toLowerCase().replace(/\s/g, "-") +
+                        "&&" +
+                        recipe._id
+                        }`}
+                    >
+                      <a>{recipe.name}</a>
+                    </Link>
+                    <Image
+                      src={`/../static/images/${recipe.name}.jpg`}
+                      alt={recipe.name}
+                      width="300"
+                      height="200"
+                    />
+
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </Grid>
+        </Grid>
+
+
+      </Container>
+    </>
   );
 }
+
+
 
 export async function getStaticProps() {
   const allRecipes = await getAllRecipes();
@@ -53,3 +74,11 @@ export async function getStaticProps() {
     },
   };
 }
+
+
+
+
+
+
+
+
