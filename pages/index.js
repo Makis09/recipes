@@ -3,6 +3,7 @@ import Link from "next/Link";
 import Image from "next/image";
 import { Container, Grid, Button } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
+import GetSingleFilter from "../components/Filters/singleFilter"
 
 
 
@@ -18,14 +19,14 @@ export default function Home(props) {
 
         {/* Navbar */}
         {/* Carousel */}
-        {/* Advanced Filters */}
+
 
         <Grid container spacing={3}>
 
-          <Grid item md={3}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, exercitationem!
+          <Grid item md={2}>
+            {/* Advanced Filters */} <GetSingleFilter/>
           </Grid>
-          <Grid item md={9} >
+          <Grid item md={10} >
             <Grid container spacing={3}>
               {props.allRecipes.map((recipe) => {
                 return (
@@ -59,6 +60,8 @@ export default function Home(props) {
   );
 }
 
+
+
 export async function getStaticProps() {
   const allRecipes = await getAllRecipes();
   return {
@@ -67,3 +70,11 @@ export async function getStaticProps() {
     },
   };
 }
+
+
+
+
+
+
+
+
