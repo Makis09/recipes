@@ -6,10 +6,7 @@ import { getAllRecipes } from "../utils/recipes";
 
 import RecipeCard from "../components/recipeCard/recipeCard";
 
-import GetSingleFilter from "../components/Filters/singleFilter"
-
-
-
+import GetSingleFilter from "../components/Filters/singleFilter";
 
 export default function Home(props) {
   return (
@@ -20,51 +17,25 @@ export default function Home(props) {
       </Head>
 
       <Container>
-
         {/* Navbar */}
         {/* Carousel */}
 
-
         <Grid container spacing={3}>
-
           <Grid item md={2}>
-            {/* Advanced Filters */} <GetSingleFilter/>
+            {/* Advanced Filters */} <GetSingleFilter />
           </Grid>
-          <Grid item md={10} >
+          <Grid item md={10}>
             <Grid container spacing={3}>
               {props.allRecipes.map((recipe) => {
-                return (
-                  <Grid item key={recipe.name} md={4} xs={4}>
-                    <Link
-                      style={{ display: "block" }}
-                      href={`/${recipe.name.toLowerCase().replace(/\s/g, "-") +
-                        "&&" +
-                        recipe._id
-                        }`}
-                    >
-                      <a>{recipe.name}</a>
-                    </Link>
-                    <Image
-                      src={`/../static/images/${recipe.name}.jpg`}
-                      alt={recipe.name}
-                      width="300"
-                      height="200"
-                    />
-
-                  </Grid>
-                );
+                return <RecipeCard key={recipe._id} recipeDetails={recipe} />;
               })}
             </Grid>
           </Grid>
         </Grid>
-
-
       </Container>
     </>
   );
 }
-
-
 
 export async function getStaticProps() {
   const allRecipes = await getAllRecipes();
@@ -74,11 +45,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-
-
-
-
-
-
-
