@@ -1,7 +1,20 @@
-$font-size: 30px;
-$primary-color: red;
+$font-size-header: 30px;
+$background-color-header: #655B59;
+$primary-color-header: #fff;
+$display-header: inline-block;
+$padding-header: 4px 15px;
+
+// Header 
+
+
 
 .header {
-  color: $primary-color;
-  font-size: $font-size;
+  color: $primary-color-header;
+  font-size: $font-size-header;
+  background-color: $background-color-header;
+  display: $display-header;
+  padding: $padding-header;
 }
+
+
+

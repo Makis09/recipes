@@ -15,30 +15,31 @@ export default function RecipeCard({ recipeDetails }) {
     <Grid className={classes.recipeCard} item md={4}>
       <Link
         style={{ display: "block" }}
-        href={`/${
-          recipeDetails.name.toLowerCase().replace(/\s/g, "-") +
+        href={`/${recipeDetails.name.toLowerCase().replace(/\s/g, "-") +
           "&&" +
           recipeDetails._id
-        }`}
+          }`}
       >
-        <Card>
-          <CardMedia
-            component="img"
-            alt={recipeDetails.name}
-            height="250"
-            image={`/static/images/${recipeDetails.name}.jpg`}
-            title={recipeDetails.name}
-          />
-          <CardContent>
-            <Typography variant="h3">{recipeDetails.name}</Typography>
-            <Typography variant="h5" color="textSecondary">
-              Mexican - DInner
+        <a>
+          <Card>
+            <CardMedia
+              component="img"
+              alt={recipeDetails.name}
+              height="250"
+              image={`/static/images/${recipeDetails.name}.jpg`}
+              title={recipeDetails.name}
+            />
+            <CardContent>
+              <Typography className={classes.pacer} variant="h3">{recipeDetails.name}</Typography>
+              <Typography variant="h5" color="textSecondary">
+                Mexican - DInner
             </Typography>
-            <div className={classes.meow}>
-              <FontAwesomeIcon size="lg" icon={["far", "clock"]} />
-            </div>
-          </CardContent>
-        </Card>
+              <div className={classes.meow}>
+                <FontAwesomeIcon size="lg" icon={["far", "clock"]} />
+              </div>
+            </CardContent>
+          </Card>
+        </a>
       </Link>
     </Grid>
   );
