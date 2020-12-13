@@ -33,6 +33,7 @@ export default function recipe(props) {
             <ul className={classes.ulPreparation}>
               {props.recipeData.instructions.map((instruction) => {
                 const bold = instruction.includes("bolded");
+                
                 return (
                   <li
                     key={instruction}
@@ -67,7 +68,7 @@ export default function recipe(props) {
             {/* btn back */}<Link href='/'><button className={classes.backBtn}>Back</button></Link>
           </Grid>
           <Grid item md={12}>
-            Lorem ipsum dolor sit amet nsectetur adipisicing elit. Quisquam totam iusto consectetur porro accusantium excepturi  consectetur adipisicing elit. Quisquam totam iusto consectetur porro accusantium excepturi inventore velit amet nobis illum!
+            <div className={classes.preparationDiv}><img src='../static/prep-pink.png'></img><h4 className={classes.preparation}>Similar recipes</h4></div>
           </Grid>
         </Grid>
       </Container>
