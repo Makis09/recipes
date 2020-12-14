@@ -28,6 +28,7 @@ export default function Home(props) {
             <Grid container spacing={3}>
               {props.allRecipes.map((recipe) => {
                 return <RecipeCard key={recipe._id} recipeDetails={recipe} />;
+                
               })}
             </Grid>
           </Grid>
