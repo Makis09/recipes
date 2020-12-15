@@ -1,7 +1,7 @@
 // Preparation
 
 $font-size-preparation: 30px;
-$color-preparation: #FF6969;
+$color-preparation: #ff6969;
 $margin-top-preparation: 0px;
 $margin-bottom-preparation: 0px;
 $margin-left-preparation: 5px;
@@ -12,7 +12,7 @@ $display-preparation: inline-block;
 $display: flex;
 $align-items: center;
 
-// instructionDiv 
+// instructionDiv
 
 $display: flex;
 $align-items: center;
@@ -25,110 +25,106 @@ $padding-left-ul: 18px;
 // liPreparation
 
 $font-size-li: 18px;
-$color-li: #655B59;
+$color-li: #655b59;
 $line-height-li: 35px;
 
 // Save button
 
 $background-color-btn: transparent;
-$border-btn: 3px solid #655B59;
+$border-btn: 3px solid #655b59;
 $width-btn: 100%;
 $padding-top-btn: 3%;
 $padding-bottom-btn: 3%;
-$color-btn: #655B59;
+$color-btn: #655b59;
 $font-weight-btn: 700;
 $font-size-btn: 20px;
 $letter-spacing-btn: 4px;
 $margin-bottom-btn: 7%;
 $font-family-btn: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $border-radius-btn: 5px;
 
 // Copy Btn
 
-$background-color-btn-copy: #655B59;
+$background-color-btn-copy: #655b59;
 $color-btn-copy: #fff;
 
-// Back Btn 
+// Back Btn
 
-$background-color-btn-back: #FF6969;
-$border-btn-back: #FF6969;
-
-
-
-
+$background-color-btn-back: #ff6969;
+$border-btn-back: #ff6969;
 
 .preparation {
-    font-size: $font-size-preparation;
-    color: $color-preparation;
-    margin-top: $margin-top-preparation;
-    margin-bottom: $margin-bottom-preparation;
-    margin-left: $margin-left-preparation;
-    display: $display-preparation;
+  font-size: $font-size-preparation;
+  color: $color-preparation;
+  margin-top: $margin-top-preparation;
+  margin-bottom: $margin-bottom-preparation;
+  margin-left: $margin-left-preparation;
+  display: $display-preparation;
 }
 
 .preparationDiv {
-    display: $display;
-    align-items: $align-items;
+  display: $display;
+  align-items: $align-items;
 }
 
 .instructionDiv {
-    display: $display;
-    align-items: $align-items;
-    margin-top: $margin-top-instruction;
+  display: $display;
+  align-items: $align-items;
+  margin-top: $margin-top-instruction;
 }
 
 .ulPreparation {
-    padding-left: $padding-left-ul;
+  padding-left: $padding-left-ul;
 }
 
 .liPreparation {
-    font-size: $font-size-li;
-    color: $color-li;
-    line-height: $line-height-li;
+  font-size: $font-size-li;
+  color: $color-li;
+  line-height: $line-height-li;
 }
 
 .saveBtn {
-    background-color: $background-color-btn;
-    border: $border-btn;
-    width: $width-btn;
-    color: $color-btn;
-    padding-top: $padding-top-btn;
-    padding-bottom: $padding-bottom-btn;
-    font-weight: $font-weight-btn;
-    font-size: $font-size-btn;
-    letter-spacing: $letter-spacing-btn;
-    font-family: $font-family-btn;
-    margin-bottom: $margin-bottom-btn;
-    border-radius: $border-radius-btn;
+  background-color: $background-color-btn;
+  border: $border-btn;
+  width: $width-btn;
+  color: $color-btn;
+  padding-top: $padding-top-btn;
+  padding-bottom: $padding-bottom-btn;
+  font-weight: $font-weight-btn;
+  font-size: $font-size-btn;
+  letter-spacing: $letter-spacing-btn;
+  font-family: $font-family-btn;
+  margin-bottom: $margin-bottom-btn;
+  border-radius: $border-radius-btn;
 }
 
 .copyBtn {
-    background-color: $background-color-btn-copy;
-    border: $border-btn;
-    width: $width-btn;
-    color: $color-btn-copy;
-    padding-top: $padding-top-btn;
-    padding-bottom: $padding-bottom-btn;
-    font-weight: $font-weight-btn;
-    font-size: $font-size-btn;
-    letter-spacing: $letter-spacing-btn;
-    font-family: $font-family-btn;
-    margin-bottom: $margin-bottom-btn;
-    border-radius: $border-radius-btn;
+  background-color: $background-color-btn-copy;
+  border: $border-btn;
+  width: $width-btn;
+  color: $color-btn-copy;
+  padding-top: $padding-top-btn;
+  padding-bottom: $padding-bottom-btn;
+  font-weight: $font-weight-btn;
+  font-size: $font-size-btn;
+  letter-spacing: $letter-spacing-btn;
+  font-family: $font-family-btn;
+  margin-bottom: $margin-bottom-btn;
+  border-radius: $border-radius-btn;
 }
 
 .backBtn {
-    background-color: $background-color-btn-back;
-    border: $border-btn-back;
-    color: $color-btn-copy;
-    width: $width-btn;
-    padding-top: $padding-top-btn;
-    padding-bottom: $padding-bottom-btn;
-    font-weight: $font-weight-btn;
-    font-size: $font-size-btn;
-    letter-spacing: $letter-spacing-btn;
-    font-family: $font-family-btn;
-    margin-bottom: $margin-bottom-btn;
-    border-radius: $border-radius-btn;
+  background-color: $background-color-btn-back;
+  border: $border-btn-back;
+  color: $color-btn-copy;
+  width: $width-btn;
+  padding-top: $padding-top-btn;
+  padding-bottom: $padding-bottom-btn;
+  font-weight: $font-weight-btn;
+  font-size: $font-size-btn;
+  letter-spacing: $letter-spacing-btn;
+  font-family: $font-family-btn;
+  margin-bottom: $margin-bottom-btn;
+  border-radius: $border-radius-btn;
 }

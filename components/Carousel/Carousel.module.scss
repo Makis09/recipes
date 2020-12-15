@@ -1,0 +1,42 @@
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 150px);
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+}
+.indicators {
+  text-align: center;
+  padding: 20px;
+  span {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #cfc5c4;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 1.5s ease;
+    -webkit-transition: background-color 1.5s ease;
+    -moz-transition: background-color 1.5s ease;
+    -o-transition: background-color 1.5s ease;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    width: calc(100vw - 17px);
+    height: 70vh;
+  }
+  .indicators {
+    padding: 40px;
+  }
+}
