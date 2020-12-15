@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 function GetSingleFilter() {
   const filtersArray = arrayFilters;
-  console.log(filtersArray);
 
   return (
     <div>

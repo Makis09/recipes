@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Link from "next/Link";
-import Image from "next/image";
-import { Container, Grid, Button } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
 
 import RecipeCard from "../components/recipeCard/recipeCard";
@@ -28,7 +26,6 @@ export default function Home(props) {
             <Grid container spacing={3}>
               {props.allRecipes.map((recipe) => {
                 return <RecipeCard key={recipe._id} recipeDetails={recipe} />;
-                
               })}
             </Grid>
           </Grid>

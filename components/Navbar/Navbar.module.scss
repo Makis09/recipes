@@ -1,0 +1,99 @@
+$color: rgb(101, 91, 89);
+
+.navbar {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  margin: 30px 0;
+  display: inline-block;
+}
+
+.navItems {
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  li {
+    display: inline-block;
+    margin: auto 17px;
+    color: $color;
+    svg {
+      margin-right: 5px;
+    }
+  }
+  .signIn a,
+  .signUp a {
+    padding: 7px 17px;
+    border-radius: 5px;
+  }
+  .signIn a {
+    border: 2px solid $color !important;
+  }
+  .signUp a {
+    border: 2px solid $color !important;
+    background-color: $color;
+    color: white;
+  }
+}
+
+.HamburgerIcon {
+  display: none;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  span {
+    background-color: rgb(83, 82, 82);
+    height: 4px;
+    display: block;
+    margin: 6px 0 6px auto;
+    border-radius: 5px;
+  }
+  span:nth-child(1) {
+    width: 36px;
+  }
+  span:nth-child(2) {
+    width: 27px;
+  }
+  span:nth-child(3) {
+    width: 18px;
+  }
+}
+// .NavUser {
+//   display: none !important;
+// }
+
+@media (max-width: 768px) {
+  .navItems {
+    -webkit-transition: max-height 500ms ease-out;
+    -moz-transition: max-height 500ms ease-out;
+    -o-transition: max-height 500ms ease-out;
+    -ms-transition: max-height 500ms ease-out;
+    transition: max-height 500ms ease-out;
+    overflow: hidden;
+    width: 100%;
+    max-height: 400px;
+    ul {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    li {
+      margin: 15px 0 15px auto;
+    }
+  }
+  .navCollapsed {
+    max-height: 0;
+  }
+  .logo {
+    margin: 15px 0;
+  }
+  .HamburgerIcon,
+  .NavUser {
+    display: inline;
+  }
+}
