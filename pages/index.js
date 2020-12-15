@@ -5,6 +5,7 @@ import { getAllRecipes } from "../utils/recipes";
 import RecipeCard from "../components/recipeCard/recipeCard";
 
 import GetSingleFilter from "../components/Filters/singleFilter";
+import Carousel from "../components/Carousel/Carousel";
 
 export default function Home(props) {
   return (
@@ -13,11 +14,8 @@ export default function Home(props) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Carousel />
       <Container>
-        {/* Navbar */}
-        {/* Carousel */}
-
         <Grid container spacing={3}>
           <Grid item md={2}>
             {/* Advanced Filters */} <GetSingleFilter />
