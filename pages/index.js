@@ -18,13 +18,14 @@ export default function Home(props) {
       <Container>
         <Grid container spacing={3}>
           <Grid item md={2}>
-            {/* Advanced Filters */} <GetSingleFilter />
+            <GetSingleFilter />
           </Grid>
           <Grid item md={10}>
             <Grid container spacing={3}>
               {props.allRecipes.map((recipe) => {
                 return <RecipeCard key={recipe._id} recipeDetails={recipe} />;
               })}
+              
             </Grid>
           </Grid>
         </Grid>
@@ -41,3 +42,4 @@ export async function getStaticProps() {
     },
   };
 }
+
