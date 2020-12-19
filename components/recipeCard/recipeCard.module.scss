@@ -22,11 +22,40 @@
 }
 .recipeInfo {
   display: flex;
-  svg {
-    margin-right: 5px;
-  }
   span {
+    margin-left: 5px;
+  }
+  .recipeInfoHolder {
     width: 50%;
     min-height: 44px;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardMain {
+    position: relative;
+    border-radius: 20px !important;
+    .CardBody {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      .recipeInfo {
+        display: none;
+      }
+      .cardTags {
+        color: white;
+        font-size: 1.5rem !important;
+      }
+      .cardTitle {
+        font-size: 1.75rem;
+        min-height: 110px;
+        -webkit-line-clamp: 3;
+      }
+    }
   }
 }

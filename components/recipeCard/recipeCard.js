@@ -45,14 +45,14 @@ export default function RecipeCard({ recipeDetails }) {
                 {`${recipeTags[0]} | ${recipeTags[1]} | ${recipeTags[2]} `}
               </Typography>
               <div className={classes.recipeInfo}>
-                <span>
+                <div className={classes.recipeInfoHolder}>
                   <FontAwesomeIcon size="lg" icon={["far", "clock"]} />
-                  {recipeDetails.prepTime}
-                </span>
-                <span>
+                  <span>{recipeDetails.prepTime}</span>
+                </div>
+                <div className={classes.recipeInfoHolder}>
                   <FontAwesomeIcon size="lg" icon={"utensils"} />
-                  {recipeDetails.servings}
-                </span>
+                  <span>{recipeDetails.servings}</span>
+                </div>
               </div>
             </CardContent>
           </Card>
