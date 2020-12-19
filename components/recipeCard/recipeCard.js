@@ -1,6 +1,5 @@
 import classes from "./recipeCard.module.scss";
 import Link from "next/Link";
-import Image from "next/image";
 import {
   Grid,
   Card,
@@ -11,17 +10,23 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function RecipeCard({ recipeDetails }) {
+  console.log(recipeDetails);
+  const recipeTags =
+    recipeDetails.tags[0] === "BON APPÉTIT"
+      ? recipeDetails.tags.slice(1, 4)
+      : recipeDetails.tags.slice(0, 3);
   return (
-    <Grid className={classes.recipeCard} item md={4}>
+    <Grid item md={4}>
       <Link
         style={{ display: "block" }}
-        href={`/${recipeDetails.name.toLowerCase().replace(/\s/g, "-") +
+        href={`/${
+          recipeDetails.name.toLowerCase().replace(/\s/g, "-") +
           "&&" +
           recipeDetails._id
-          }`}
+        }`}
       >
         <a>
-          <Card>
+          <Card className={classes.cardMain}>
             <CardMedia
               component="img"
               alt={recipeDetails.name}
@@ -29,13 +34,26 @@ export default function RecipeCard({ recipeDetails }) {
               image={`/static/images/${recipeDetails.name}.jpg`}
               title={recipeDetails.name}
             />
-            <CardContent>
-              <Typography className={classes.pacer} variant="h3">{recipeDetails.name}</Typography>
-              <Typography variant="h5" color="textSecondary">
-                Mexican - DInner
-            </Typography>
-              <div className={classes.meow}>
-                <FontAwesomeIcon size="lg" icon={["far", "clock"]} />
+            <CardContent className={classes.CardBody}>
+              <Typography className={classes.cardTitle} variant="h5">
+                {recipeDetails.name}
+              </Typography>
+              <Typography
+                className={classes.cardTags}
+                variant="h6"
+                color="textSecondary"
+              >
+                {`${recipeTags[0]} | ${recipeTags[1]} | ${recipeTags[2]} `}
+              </Typography>
+              <div className={classes.recipeInfo}>
+                <span>
+                  <FontAwesomeIcon size="lg" icon={["far", "clock"]} />
+                  {recipeDetails.prepTime}
+                </span>
+                <span>
+                  <FontAwesomeIcon size="lg" icon={"utensils"} />
+                  {recipeDetails.servings}
+                </span>
               </div>
             </CardContent>
           </Card>

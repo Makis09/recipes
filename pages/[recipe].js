@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import Image from "next/image";
 import { getAllRecipeIds, getRecipeData, getAllRecipes } from "../utils/recipes";
 import Link from "next/Link";
@@ -15,26 +16,27 @@ export default function recipe(props) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid container >
-        <Grid item md={12}>
-          <Image
+      <Grid container justify="center">
+        <Grid item md={6}>
+          <img
+            className={classes.recipeImage}
             src={`/../static/images/${props.recipeData.name}.jpg`}
             alt={recipe.name}
-            width={700}
-            height={500}
           />
         </Grid>
       </Grid>
       <Container>
         <Grid container>
           <Grid item md={8}>
-
             <Header>{props.recipeData.name}</Header>
-            <div className={classes.preparationDiv}><img src='../static/prep-pink.png'></img><h4 className={classes.preparation}>Preparation</h4></div>
+            <div className={classes.preparationDiv}>
+              <img src="../static/prep-pink.png"></img>
+              <h4 className={classes.preparation}>Preparation</h4>
+            </div>
             <ul className={classes.ulPreparation}>
               {props.recipeData.instructions.map((instruction) => {
                 const bold = instruction.includes("bolded");
-                
+
                 return (
                   <li
                     key={instruction}
@@ -51,19 +53,20 @@ export default function recipe(props) {
             {/* Empty for space */}
           </Grid>
           <Grid item md={3}>
-            <div className={classes.instructionDiv}><img src='../static/prep-pink.png'></img><h4 className={classes.preparation}>Instructions</h4></div>
+            <div className={classes.instructionDiv}>
+              <img src="../static/prep-pink.png"></img>
+              <h4 className={classes.preparation}>Instructions</h4>
+            </div>
             <ul className={classes.ulPreparation}>
               {props.recipeData.ingredients.map((ingredient) => {
                 return (
-                  <li
-                    key={ingredient}
-                    className={classes.liPreparation}
-                  >
+                  <li key={ingredient} className={classes.liPreparation}>
                     {ingredient}
                   </li>
-                )
+                );
               })}
             </ul>
+
             <button className={classes.saveBtn}>Save recipe</button>
             <button className={classes.copyBtn}>Copy URL</button>
             <Link href='/'><button className={classes.backBtn}>Back</button></Link>
@@ -74,8 +77,6 @@ export default function recipe(props) {
           </Grid>
         </Grid>
       </Container>
-
-
     </div>
   );
 }
@@ -97,6 +98,3 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-
-
-

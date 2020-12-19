@@ -1,8 +1,32 @@
-.recipeCard {
-  box-sizing: border-box;
+.cardMain {
+  box-shadow: none !important;
 }
-.meow {
-  font-size: 10px;
-  color: blue;
+.CardBody {
+  padding-bottom: 0 !important;
+  border: 2px solid #cfc3c1;
+  border-top: none;
 }
-
+.cardTitle {
+  font-weight: 600 !important;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  min-height: 65px;
+}
+.cardTags {
+  font-size: 1rem !important;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+  min-height: 52px;
+}
+.recipeInfo {
+  display: flex;
+  svg {
+    margin-right: 5px;
+  }
+  span {
+    width: 50%;
+    min-height: 44px;
+  }
+}
