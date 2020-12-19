@@ -1,9 +1,13 @@
 import Head from "next/head";
-import { getAllRecipeIds, getRecipeData } from "../utils/recipes";
+
+import Image from "next/image";
+import { getAllRecipeIds, getRecipeData, getAllRecipes } from "../utils/recipes";
 import Link from "next/Link";
 import Header from "../components/Header/header";
 import { Container, Grid } from "@material-ui/core";
-import classes from "./recipe.module.scss";
+import classes from './recipe.module.scss'
+import SimilarRecipes from '../components/SimilarRecipes/similarRecipe'
+
 
 export default function recipe(props) {
   return (
@@ -62,20 +66,14 @@ export default function recipe(props) {
                 );
               })}
             </ul>
-            {/* btn save */}
+
             <button className={classes.saveBtn}>Save recipe</button>
-            {/* btn copy */}
             <button className={classes.copyBtn}>Copy URL</button>
-            {/* btn back */}
-            <Link href="/">
-              <button className={classes.backBtn}>Back</button>
-            </Link>
+            <Link href='/'><button className={classes.backBtn}>Back</button></Link>
           </Grid>
           <Grid item md={12}>
-            <div className={classes.preparationDiv}>
-              <img src="../static/prep-pink.png"></img>
-              <h4 className={classes.preparation}>Similar recipes</h4>
-            </div>
+            <div className={classes.preparationDiv}><img src='../static/prep-pink.png'></img><h4 className={classes.preparation}>Similar recipes</h4></div>
+            <SimilarRecipes fullRecipeList={props.allRecipes} singleRecipe={props.recipeData}/>
           </Grid>
         </Grid>
       </Container>
@@ -92,9 +90,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const recipeData = await getRecipeData(params.recipe);
+  const allRecipes = await getAllRecipes();
   return {
     props: {
       recipeData,
+      allRecipes,
     },
   };
 }
