@@ -10,7 +10,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function RecipeCard({ recipeDetails }) {
-  console.log(recipeDetails);
   const recipeTags =
     recipeDetails.tags[0] === "BON APPÉTIT"
       ? recipeDetails.tags.slice(1, 4)
