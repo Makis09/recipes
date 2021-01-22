@@ -2,6 +2,35 @@
   position: relative;
   width: 100vw;
   height: calc(100vh - 150px);
+  h1{
+    color: white;
+    font-weight: 400;
+    font-size: 3em;
+    letter-spacing: .15em;
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+  h1::before{
+    content: ' ';
+    width: 40px;
+    height: 100%;
+    background-color: #ff6969ce;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+  }
+  h1::after{
+    content: ' ';
+    width: 40px;
+    height: 100%;
+    background-color: #ff6969ce;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+  }
 }
 .bg {
   position: absolute;
@@ -12,7 +41,13 @@
   background-size: cover;
   background-position: center;
   will-change: opacity;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: color;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
+
 .indicators {
   text-align: center;
   padding: 20px;

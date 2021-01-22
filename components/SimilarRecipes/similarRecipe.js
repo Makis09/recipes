@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SimilarRecipes({ fullRecipeList, singleRecipe }) {
   const similar = fullRecipeList.reduce((accumulator, currentValue) => {
+    console.log(currentValue.tags);
     let haveSameTag = 0;
     for (let tag of singleRecipe.tags) {
       if (
@@ -25,7 +26,6 @@ export default function SimilarRecipes({ fullRecipeList, singleRecipe }) {
   const g = similar.sort((a, b) => {
     b.similarities - a.similarities;
   });
-  console.log(g);
   return (
     <Grid container spacing={5}>
       {similar

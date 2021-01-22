@@ -25,7 +25,6 @@ export default function Home(props) {
               {props.allRecipes.map((recipe) => {
                 return <RecipeCard key={recipe._id} recipeDetails={recipe} />;
               })}
-              
             </Grid>
           </Grid>
         </Grid>
@@ -42,4 +41,3 @@ export async function getStaticProps() {
     },
   };
 }
-
