@@ -39,7 +39,9 @@ export default function Carousel() {
                 ...props,
                 backgroundImage: "url(" + `${`${item.url}`}` + ")",
               }}
-            />
+            >
+              <h1>Ready to <strong>cook</strong>? <br/>Look <strong>no</strong> further</h1>
+            </animated.div>
           );
         })}
       </div>

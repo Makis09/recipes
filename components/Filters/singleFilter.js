@@ -1,22 +1,31 @@
 import React from "react";
-import arrayFilters from "./filterArray";
 import { Avatar } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import classes from "./singleFilter.module.scss";
 
 function GetSingleFilter() {
-  const filtersArray = arrayFilters;
+  const filtersArray = [
+    "Breakfast",
+    "Lunch",
+    "Dinner",
+    "Dessert",
+    "Seafood",
+    "Asian",
+    "Italian",
+    "Mexican",
+    "Baked",
+  ];
 
   return (
-    <div>
+    <div className={classes.filters}>
       {filtersArray.map((filter) => {
         return (
-          <div key={filter.type}>
+          <div key={filter} className={classes.singleFilter}>
             <Avatar
-              src={`/static/filter-images/${filter.type}.jpg`}
-              style={{ height: "60px", width: "60px" }}
-              alt={filter.type}
+              src={`/static/filter-images/${filter}.jpg`}
+              style={{ height: "60px", width: "60px", margin: "0 auto" }}
+              alt={filter}
             />
-            <p>{filter.type}</p>
+            <span>{filter}</span>
           </div>
         );
       })}
