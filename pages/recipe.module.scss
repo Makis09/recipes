@@ -7,10 +7,6 @@ $margin-bottom-preparation: 0px;
 $margin-left-preparation: 5px;
 $display-preparation: inline-block;
 
-//Image
-// .recipeImage {
-//   width: 100%;
-// }
 // preparationDiv
 
 $display: flex;
@@ -131,4 +127,11 @@ $border-btn-back: #ff6969;
   font-family: $font-family-btn;
   margin-bottom: $margin-bottom-btn;
   border-radius: $border-radius-btn;
+}
+
+@media (max-width: 600px) {
+  //Image
+  .recipeImage {
+    width: 100%;
+  }
 }

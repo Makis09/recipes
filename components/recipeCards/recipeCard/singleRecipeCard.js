@@ -1,4 +1,4 @@
-import classes from "./recipeCard.module.scss";
+import classes from "../recipeCards.module.scss";
 import Link from "next/Link";
 import {
   Grid,
@@ -15,7 +15,7 @@ export default function RecipeCard({ recipeDetails }) {
       ? recipeDetails.tags.slice(1, 4)
       : recipeDetails.tags.slice(0, 3);
   return (
-    <Grid item md={4}>
+    <Grid item md={4} sm={6} xs={12}>
       <Link
         style={{ display: "block" }}
         href={`/${
