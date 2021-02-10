@@ -5,7 +5,8 @@ import {
   faSignInAlt,
   faUserPlus,
   faUtensils,
+  faAngleDoubleRight
 } from "@fortawesome/free-solid-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 
-library.add(faClock, faSignInAlt, faUserPlus, faUtensils);
+library.add(faClock, faSignInAlt, faUserPlus, faUtensils, faAngleDoubleRight);

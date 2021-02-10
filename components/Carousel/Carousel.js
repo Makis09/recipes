@@ -6,11 +6,11 @@ export default function Carousel() {
   const [index, setIndex] = useState(0);
 
   const slides = [
-    { id: 0, url: "/static/filter-images/Asian.jpg" },
-    { id: 1, url: "/static/filter-images/Baked.jpg" },
-    { id: 2, url: "/static/filter-images/Breakfast.jpg" },
-    { id: 3, url: "/static/filter-images/Italian.jpg" },
-    { id: 4, url: "/static/filter-images/Mexican.jpg" },
+    { id: 0, url: "/static/carousel-images/Asian.jpg" },
+    { id: 1, url: "/static/carousel-images/Baked.jpg" },
+    { id: 2, url: "/static/carousel-images/Breakfast.jpg" },
+    { id: 3, url: "/static/carousel-images/Italian.jpg" },
+    { id: 4, url: "/static/carousel-images/Mexican.jpg" },
   ];
 
   const transitions = useTransition(slides[index], (item) => item.id, {

@@ -59,3 +59,10 @@
     }
   }
 }
+@media (max-width: 600px) {
+  .recipesMain {
+    // max-width: 100% !important;
+    // // max-width: calc(100% - 72px) !important;
+    flex-basis: 100% !important;
+  }
+}

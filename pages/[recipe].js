@@ -1,13 +1,15 @@
 import Head from "next/head";
 
-import Image from "next/image";
-import { getAllRecipeIds, getRecipeData, getAllRecipes } from "../utils/recipes";
+import {
+  getAllRecipeIds,
+  getRecipeData,
+  getAllRecipes,
+} from "../utils/recipes";
 import Link from "next/Link";
 import Header from "../components/Header/header";
 import { Container, Grid } from "@material-ui/core";
-import classes from './recipe.module.scss'
-import SimilarRecipes from '../components/SimilarRecipes/similarRecipe'
-
+import classes from "./recipe.module.scss";
+import SimilarRecipes from "../components/SimilarRecipes/similarRecipe";
 
 export default function recipe(props) {
   return (
@@ -58,9 +60,9 @@ export default function recipe(props) {
               <h4 className={classes.preparation}>Instructions</h4>
             </div>
             <ul className={classes.ulPreparation}>
-              {props.recipeData.ingredients.map((ingredient) => {
+              {props.recipeData.ingredients.map((ingredient, index) => {
                 return (
-                  <li key={ingredient} className={classes.liPreparation}>
+                  <li key={index} className={classes.liPreparation}>
                     {ingredient}
                   </li>
                 );
@@ -69,11 +71,24 @@ export default function recipe(props) {
 
             <button className={classes.saveBtn}>Save recipe</button>
             <button className={classes.copyBtn}>Copy URL</button>
-            <Link href='/'><button className={classes.backBtn}>Back</button></Link>
+            <Link href="/">
+              <button className={classes.backBtn}>Back</button>
+            </Link>
           </Grid>
-          <Grid item md={12}>
-            <div className={classes.preparationDiv}><img src='../static/prep-pink.png'></img><h4 className={classes.preparation}>Similar recipes</h4></div>
-            <SimilarRecipes fullRecipeList={props.allRecipes} singleRecipe={props.recipeData}/>
+          <Grid container>
+            <Grid
+              item
+              md={12}
+              className={classes.preparationDiv}
+              style={{ marginBottom: "20px" }}
+            >
+              <img src="../static/prep-pink.png"></img>
+              <h4 className={classes.preparation}>Similar recipes</h4>
+            </Grid>
+            <SimilarRecipes
+              fullRecipeList={props.allRecipes}
+              singleRecipe={props.recipeData}
+            />
           </Grid>
         </Grid>
       </Container>

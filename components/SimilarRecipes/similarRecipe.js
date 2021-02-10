@@ -1,15 +1,9 @@
-import {
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-} from "@material-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Grid } from "@material-ui/core";
+
+import SingleRecipeCard from "../recipeCards/recipeCard/singleRecipeCard";
 
 export default function SimilarRecipes({ fullRecipeList, singleRecipe }) {
   const similar = fullRecipeList.reduce((accumulator, currentValue) => {
-    console.log(currentValue.tags);
     let haveSameTag = 0;
     for (let tag of singleRecipe.tags) {
       if (
@@ -23,37 +17,13 @@ export default function SimilarRecipes({ fullRecipeList, singleRecipe }) {
     return accumulator;
   }, []);
 
-  const g = similar.sort((a, b) => {
-    b.similarities - a.similarities;
-  });
   return (
-    <Grid container spacing={5}>
+    <Grid container spacing={3}>
       {similar
         .sort((a, b) => b.similarities - a.similarities)
-        .slice(1, 5)
+        .slice(1, 4)
         .map((recipe) => {
-          return (
-            <Grid item md={3} key={recipe._id}>
-              <Card>
-                <CardMedia
-                  component="img"
-                  alt={recipe.name}
-                  height="200"
-                  image={`/static/images/${recipe.name}.jpg`}
-                  title={recipe.name}
-                />
-                <CardContent>
-                  <Typography>{recipe.name}</Typography>
-                  <Typography variant="h5" color="textSecondary">
-                    Mexican - DInner
-                  </Typography>
-                  <div>
-                    <FontAwesomeIcon size="lg" icon={["far", "clock"]} />
-                  </div>
-                </CardContent>
-              </Card>
-            </Grid>
-          );
+          return <SingleRecipeCard key={recipe._id} recipeDetails={recipe} />;
         })}
     </Grid>
   );
