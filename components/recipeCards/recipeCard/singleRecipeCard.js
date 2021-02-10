@@ -1,5 +1,5 @@
 import classes from "../recipeCards.module.scss";
-import Link from "next/Link";
+import Link from "next/link";
 import {
   Grid,
   Card,

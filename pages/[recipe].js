@@ -5,7 +5,7 @@ import {
   getRecipeData,
   getAllRecipes,
 } from "../utils/recipes";
-import Link from "next/Link";
+import Link from "next/link";
 import Header from "../components/Header/header";
 import { Container, Grid } from "@material-ui/core";
 import classes from "./recipe.module.scss";
