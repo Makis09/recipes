@@ -30,7 +30,7 @@ export default function RecipeCard({ recipeDetails }) {
               component="img"
               alt={recipeDetails.name}
               height="250"
-              image={`/static/images/${recipeDetails.name}.jpg`}
+              image={`/images/${recipeDetails.name}.jpg`}
               title={recipeDetails.name}
             />
             <CardContent className={classes.CardBody}>

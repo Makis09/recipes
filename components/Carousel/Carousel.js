@@ -6,11 +6,11 @@ export default function Carousel() {
   const [index, setIndex] = useState(0);
 
   const slides = [
-    { id: 0, url: "/static/carousel-images/Asian.jpg" },
-    { id: 1, url: "/static/carousel-images/Baked.jpg" },
-    { id: 2, url: "/static/carousel-images/Breakfast.jpg" },
-    { id: 3, url: "/static/carousel-images/Italian.jpg" },
-    { id: 4, url: "/static/carousel-images/Mexican.jpg" },
+    { id: 0, url: "/carousel-images/Asian.jpg" },
+    { id: 1, url: "/carousel-images/Baked.jpg" },
+    { id: 2, url: "/carousel-images/Breakfast.jpg" },
+    { id: 3, url: "/carousel-images/Italian.jpg" },
+    { id: 4, url: "/carousel-images/Mexican.jpg" },
   ];
 
   const transitions = useTransition(slides[index], (item) => item.id, {
@@ -40,7 +40,10 @@ export default function Carousel() {
                 backgroundImage: "url(" + `${`${item.url}`}` + ")",
               }}
             >
-              <h1>Ready to <strong>cook</strong>? <br/>Look <strong>no</strong> further</h1>
+              <h1>
+                Ready to <strong>cook</strong>? <br />
+                Look <strong>no</strong> further
+              </h1>
             </animated.div>
           );
         })}

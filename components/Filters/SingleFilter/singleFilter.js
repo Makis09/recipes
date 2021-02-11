@@ -24,9 +24,11 @@ function singleFilter({ changeActiveFilters, activeFilters }) {
         >
           <Avatar
             className={
-              activeFilters.includes(filter) ? classes.activeFilter : classes.notActiveFilter
+              activeFilters.includes(filter)
+                ? classes.activeFilter
+                : classes.notActiveFilter
             }
-            src={`/static/filter-images/${filter}.jpg`}
+            src={`/filter-images/${filter}.jpg`}
             style={{
               height: "55px",
               width: "55px",

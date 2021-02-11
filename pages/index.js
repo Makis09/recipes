@@ -124,8 +124,8 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Recipes - Home page</title>
+        <link rel="icon" href="/logo/logo.jpg" />
       </Head>
       <Carousel />
       <Container>

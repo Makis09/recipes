@@ -15,14 +15,14 @@ export default function recipe(props) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Recipes - {props.recipeData.name}</title>
+        <link rel="icon" href="/logo/logo.jpg" />
       </Head>
       <Grid container justify="center">
         <Grid item md={6}>
           <img
             className={classes.recipeImage}
-            src={`/../static/images/${props.recipeData.name}.jpg`}
+            src={`/images/${props.recipeData.name}.jpg`}
             alt={recipe.name}
           />
         </Grid>
@@ -32,7 +32,7 @@ export default function recipe(props) {
           <Grid item md={8}>
             <Header>{props.recipeData.name}</Header>
             <div className={classes.preparationDiv}>
-              <img src="../static/prep-pink.png"></img>
+              <img src="/prep-pink.png"></img>
               <h4 className={classes.preparation}>Preparation</h4>
             </div>
             <ul className={classes.ulPreparation}>
@@ -56,7 +56,7 @@ export default function recipe(props) {
           </Grid>
           <Grid item md={3}>
             <div className={classes.instructionDiv}>
-              <img src="../static/prep-pink.png"></img>
+              <img src="/prep-pink.png"></img>
               <h4 className={classes.preparation}>Instructions</h4>
             </div>
             <ul className={classes.ulPreparation}>
@@ -82,7 +82,7 @@ export default function recipe(props) {
               className={classes.preparationDiv}
               style={{ marginBottom: "20px" }}
             >
-              <img src="../static/prep-pink.png"></img>
+              <img src="/prep-pink.png"></img>
               <h4 className={classes.preparation}>Similar recipes</h4>
             </Grid>
             <SimilarRecipes

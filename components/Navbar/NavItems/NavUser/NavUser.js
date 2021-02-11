@@ -5,7 +5,7 @@ export default function NavUser() {
     <li>
       <Avatar
         className={classes.NavUser}
-        src="/../static/images/Tagliatelle with Asparagus and Parmesan Fonduta.jpg"
+        src="/images/Tagliatelle with Asparagus and Parmesan Fonduta.jpg"
         style={{ height: "60px", width: "60px" }}
         alt="/"
       />
