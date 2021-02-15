@@ -20,7 +20,7 @@ export default function RecipeCard({ recipeDetails }) {
         style={{ display: "block" }}
         href={`/${
           recipeDetails.name.toLowerCase().replace(/\s/g, "-") +
-          "&&" +
+          "&id=" +
           recipeDetails._id
         }`}
       >

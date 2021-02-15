@@ -7,7 +7,7 @@ export async function getAllRecipeIds() {
     return {
       params: {
         recipe: `${
-          recipe.name.toLowerCase().replace(/\s/g, "-") + "&&" + recipe._id
+          recipe.name.toLowerCase().replace(/\s/g, "-") + "&id=" + recipe._id
         }`,
       },
     };
@@ -16,15 +16,12 @@ export async function getAllRecipeIds() {
 
 export async function getRecipeData(id) {
   const { db } = await connectToDatabase();
-  let query = id.split("&&")[1];
+  let query = id.split("&id=")[1];
 
   const o_id = new mongo.ObjectID(query);
-  const recipe = await db
-    .collection("recipeList")
-    .find({ _id: o_id })
-    .toArray();
+  const recipe = await db.collection("recipeList").findOne({ _id: o_id });
 
-  return JSON.parse(JSON.stringify(recipe[0]));
+  return JSON.parse(JSON.stringify(recipe));
 }
 
 export async function getAllRecipes() {

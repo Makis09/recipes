@@ -31,8 +31,9 @@ function filters(props) {
           className={classes.filters}
           style={isMobile ? { right: `${slide.position}px` } : null}
         >
-          {filtersArray.map((filter) => (
+          {filtersArray.map((filter, index) => (
             <SingleFilter
+              key={index}
               filter={filter}
               changeActiveFilters={props.changeActiveFilters}
               activeFilters={props.activeFilters}
