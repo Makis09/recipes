@@ -13,18 +13,31 @@ function filters(props) {
     slide,
   } = props;
 
-  const g = slide.position;
+  const filtersArray = [
+    "chicken",
+    "pork",
+    "beef",
+    "pasta",
+    "potato",
+    "seafood",
+    "vegan",
+    "dessert",
+  ];
+
   return (
     <Grid item md={2} sm={1} xs={3} className={classes.filtersHolder}>
       <div className={classes.sticky}>
         <div
           className={classes.filters}
-          style={isMobile ? { right: `${g}px` } : null}
+          style={isMobile ? { right: `${slide.position}px` } : null}
         >
-          <SingleFilter
-            changeActiveFilters={props.changeActiveFilters}
-            activeFilters={props.activeFilters}
-          />
+          {filtersArray.map((filter) => (
+            <SingleFilter
+              filter={filter}
+              changeActiveFilters={props.changeActiveFilters}
+              activeFilters={props.activeFilters}
+            />
+          ))}
           <span
             className={classes.slide}
             onTouchStart={(touchStartEvent) =>

@@ -37,7 +37,7 @@ export default function Carousel() {
               className={classes.bg}
               style={{
                 ...props,
-                backgroundImage: "url(" + `${`${item.url}`}` + ")",
+                backgroundImage: `url("${item.url}")`,
               }}
             >
               <h1>

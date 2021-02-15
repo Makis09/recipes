@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "../filters.module.scss";
 
 export default function arrows({ slide }) {
-  const g = slide.position + 87;
-  const angle = g * 2.5;
+  const resetPosition = slide.position + 87;
+  const angle = resetPosition * 2.5;
   return (
     <span className={classes.arrows}>
       <FontAwesomeIcon

@@ -8,10 +8,13 @@ import RecipeCards from "../components/recipeCards/recipeCards";
 import Carousel from "../components/Carousel/Carousel";
 import Filters from "../components/Filters/filters";
 
-export default function Home(props) {
-  const [displayedRecipes, setDisplayedRecipes] = useState(props.allRecipes);
-  const [activeFilters, setActiveFilters] = useState([]);
-  const [page, setPage] = useState(1);
+export default function Home({
+  allRecipes,
+  activeFilters,
+  changeActiveFilters,
+  page,
+}) {
+  const [displayedRecipes, setDisplayedRecipes] = useState(allRecipes);
   const [isMobile, setIsmobile] = useState(null);
   const [slide, setSlide] = useState({
     scrollingDistance: 72,
@@ -25,7 +28,7 @@ export default function Home(props) {
   useEffect(() => {
     let recipesToShow;
     if (activeFilters.length) {
-      recipesToShow = props.allRecipes.filter((recipe) => {
+      recipesToShow = allRecipes.filter((recipe) => {
         for (let filter of activeFilters) {
           if (recipe.tags.includes(filter.toUpperCase())) {
             return true;
@@ -34,20 +37,9 @@ export default function Home(props) {
       });
       setDisplayedRecipes(recipesToShow);
     } else {
-      setDisplayedRecipes(props.allRecipes);
+      setDisplayedRecipes(allRecipes);
     }
   }, [activeFilters]);
-
-  const changeActiveFilters = (clickedFilter) => {
-    const updatedActiveFilters = [...activeFilters];
-    if (updatedActiveFilters.includes(clickedFilter)) {
-      const index = updatedActiveFilters.indexOf(clickedFilter);
-      updatedActiveFilters.splice(index, 1);
-    } else {
-      updatedActiveFilters.push(clickedFilter);
-    }
-    setActiveFilters(updatedActiveFilters);
-  };
 
   const positionWhenOpened = -15;
   const positionWhenClosed = -87;

@@ -32,14 +32,3 @@ export async function getAllRecipes() {
   const allRecipes = await db.collection("recipeList").find({}).toArray();
   return JSON.parse(JSON.stringify(allRecipes));
 }
-
-// export async function getRecipes(page) {
-//   const { db } = await connectToDatabase();
-//   const filters = ["POTATO" , "PORK"];
-//   console.log(page)
-//   const allRecipes = await db
-//     .collection("recipeList")
-//     .find({ tags: {  "$in" :filters } })
-//     .toArray();
-//   return JSON.parse(JSON.stringify(allRecipes));
-// }
