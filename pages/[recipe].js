@@ -5,14 +5,12 @@ import {
   getRecipeData,
   getAllRecipes,
 } from "../utils/recipes";
-import { useRouter } from "next/router";
 import Header from "../components/Header/header";
 import { Container, Grid } from "@material-ui/core";
 import classes from "./recipe.module.scss";
 import SimilarRecipes from "../components/SimilarRecipes/similarRecipe";
 
 export default function recipe(props) {
-  const Router = useRouter();
   return (
     <div>
       <Head>
@@ -71,15 +69,8 @@ export default function recipe(props) {
             </ul>
 
             <button className={classes.saveBtn}>Save recipe</button>
-            <button
-              className={classes.copyBtn}
-              onClick={() => navigator.clipboard.writeText(Router.asPath)}
-            >
-              Copy URL
-            </button>
-            <button className={classes.backBtn} onClick={() => Router.back()}>
-              Back
-            </button>
+            <button className={classes.copyBtn}>Copy URL</button>
+            <button className={classes.backBtn}>Back</button>
           </Grid>
           <Grid container>
             <Grid
