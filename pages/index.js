@@ -58,6 +58,7 @@ export default function Home({
   }, [activeFilters]);
 
   const handleTouchStart = useCallback((event) => {
+    event.preventDefault();
     const startedAt = Math.round(event.touches[0].clientX);
     dispatch({
       type: "START",
@@ -65,6 +66,7 @@ export default function Home({
     });
   }, []);
   const handleTouchMove = (event) => {
+    event.preventDefault();
     const currentPosition = Math.round(event.touches[0].clientX);
     let distanceScrolled = Math.abs(slide.startedScrollingAt - currentPosition);
     if (slide.filtersOpened && currentPosition < slide.startedScrollingAt) {
@@ -85,7 +87,8 @@ export default function Home({
       },
     });
   };
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (event) => {
+    event.preventDefault();
     const tresholdPassed = slide.distanceScrolled > slide.scrollingDistance / 2;
     const updatedSlideState = {};
     if (slide.filtersOpened) {
@@ -130,11 +133,7 @@ export default function Home({
       </Head>
       <Carousel />
       <Container>
-        <Grid
-          container
-          spacing={3}
-          style={{ position: "relative", overscrollBehavior: "contain" }}
-        >
+        <Grid container spacing={3} style={{ position: "relative" }}>
           <Filters
             handleTouchStart={handleTouchStart}
             handleTouchMove={handleTouchMove}
