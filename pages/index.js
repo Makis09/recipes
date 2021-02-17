@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer, useCallback } from "react";
 import Head from "next/head";
 import { Container, Grid } from "@material-ui/core";
 import { getAllRecipes } from "../utils/recipes";
@@ -8,6 +8,19 @@ import RecipeCards from "../components/recipeCards/recipeCards";
 import Carousel from "../components/Carousel/Carousel";
 import Filters from "../components/Filters/filters";
 
+const sliderReducer = (state, action) => {
+  switch (action.type) {
+    case "START":
+      return { ...state, ...action.updated };
+    case "SLIDE":
+      return { ...state, ...action.updated };
+    case "END":
+      return { ...state, ...action.updated };
+    default:
+      throw new Error("Something is wrong");
+  }
+};
+
 export default function Home({
   allRecipes,
   activeFilters,
@@ -16,14 +29,17 @@ export default function Home({
 }) {
   const [displayedRecipes, setDisplayedRecipes] = useState(allRecipes);
   const [isMobile, setIsmobile] = useState(null);
-  const [slide, setSlide] = useState({
+  const [slide, dispatch] = useReducer(sliderReducer, {
     scrollingDistance: 72,
     filtersOpened: false,
     startedScrollingAt: null,
     finishedScrollingAt: null,
+    willChange: false,
     distanceScrolled: null,
     position: -87,
   });
+  const positionWhenOpened = -15;
+  const positionWhenClosed = -87;
 
   useEffect(() => {
     let recipesToShow;
@@ -41,14 +57,13 @@ export default function Home({
     }
   }, [activeFilters]);
 
-  const positionWhenOpened = -15;
-  const positionWhenClosed = -87;
-
-  const handleTouchStart = (event) => {
+  const handleTouchStart = useCallback((event) => {
     const startedAt = Math.round(event.touches[0].clientX);
-    const updatedSlideState = { ...slide, startedScrollingAt: startedAt };
-    setSlide(updatedSlideState);
-  };
+    dispatch({
+      type: "START",
+      updated: { startedScrollingAt: startedAt, willChange: true },
+    });
+  }, []);
   const handleTouchMove = (event) => {
     const currentPosition = Math.round(event.touches[0].clientX);
     let distanceScrolled = Math.abs(slide.startedScrollingAt - currentPosition);
@@ -61,48 +76,42 @@ export default function Home({
     const newPosition = slide.filtersOpened
       ? positionWhenOpened - distanceScrolled
       : positionWhenClosed + distanceScrolled;
-    const updatedSlideState = {
-      ...slide,
-      finishedScrollingAt: currentPosition,
-      position: newPosition,
-      distanceScrolled: distanceScrolled,
-    };
-    setSlide(updatedSlideState);
+    dispatch({
+      type: "SLIDE",
+      updated: {
+        finishedScrollingAt: currentPosition,
+        position: newPosition,
+        distanceScrolled: distanceScrolled,
+      },
+    });
   };
   const handleTouchEnd = () => {
     const tresholdPassed = slide.distanceScrolled > slide.scrollingDistance / 2;
+    const updatedSlideState = {};
     if (slide.filtersOpened) {
       if (slide.finishedScrollingAt < slide.startedScrollingAt) {
         return;
       }
       if (tresholdPassed) {
-        setSlide({
-          ...slide,
-          filtersOpened: false,
-          position: positionWhenClosed,
-        });
+        (updatedSlideState.filtersOpened = false),
+          (updatedSlideState.position = positionWhenClosed);
       } else {
-        setSlide({
-          ...slide,
-          filtersOpened: true,
-          position: positionWhenOpened,
-        });
+        (updatedSlideState.filtersOpened = true),
+          (updatedSlideState.position = positionWhenOpened);
       }
     } else {
       if (tresholdPassed) {
-        setSlide({
-          ...slide,
-          filtersOpened: true,
-          position: positionWhenOpened,
-        });
+        (updatedSlideState.filtersOpened = true),
+          (updatedSlideState.position = positionWhenOpened);
       } else {
-        setSlide({
-          ...slide,
-          filtersOpened: false,
-          position: positionWhenClosed,
-        });
+        (updatedSlideState.filtersOpened = false),
+          (updatedSlideState.position = positionWhenClosed);
       }
     }
+    dispatch({
+      type: "END",
+      updated: { ...updatedSlideState, willChange: false },
+    });
   };
 
   useEffect(() => {

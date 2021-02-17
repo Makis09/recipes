@@ -13,7 +13,14 @@ export default function recipeCards({ allRecipes, isMobile, slide }) {
       sm={11}
       xs={9}
       className={classes.recipesMain}
-      style={isMobile ? { maxWidth: `calc(100% - ${g}px)` } : null}
+      style={
+        isMobile
+          ? {
+              maxWidth: `calc(100% - ${g}px)`,
+              willChange: `${slide.willChange ? "max-width" : "initial"}`
+            }
+          : null
+      }
     >
       <Grid container spacing={3}>
         {allRecipes.map((recipe) => {
