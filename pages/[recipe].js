@@ -5,13 +5,14 @@ import {
   getRecipeData,
   getAllRecipes,
 } from "../utils/recipes";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import Header from "../components/Header/header";
 import { Container, Grid } from "@material-ui/core";
 import classes from "./recipe.module.scss";
 import SimilarRecipes from "../components/SimilarRecipes/similarRecipe";
 
 export default function recipe(props) {
+  const Router = useRouter();
   return (
     <div>
       <Head>
@@ -36,12 +37,12 @@ export default function recipe(props) {
               <h4 className={classes.preparation}>Preparation</h4>
             </div>
             <ul className={classes.ulPreparation}>
-              {props.recipeData.instructions.map((instruction) => {
+              {props.recipeData.instructions.map((instruction, index) => {
                 const bold = instruction.includes("bolded");
 
                 return (
                   <li
-                    key={instruction}
+                    key={index}
                     style={{ fontWeight: bold ? "700" : "inherit" }}
                     className={classes.liPreparation}
                   >
@@ -70,10 +71,15 @@ export default function recipe(props) {
             </ul>
 
             <button className={classes.saveBtn}>Save recipe</button>
-            <button className={classes.copyBtn}>Copy URL</button>
-            <Link href="/">
-              <button className={classes.backBtn}>Back</button>
-            </Link>
+            <button
+              className={classes.copyBtn}
+              onClick={() => navigator.clipboard.writeText(Router.asPath)}
+            >
+              Copy URL
+            </button>
+            <button className={classes.backBtn} onClick={() => Router.back()}>
+              Back
+            </button>
           </Grid>
           <Grid container>
             <Grid

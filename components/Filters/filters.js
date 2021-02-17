@@ -29,7 +29,6 @@ function filters(props) {
       <div className={classes.sticky}>
         <div
           className={classes.filters}
-          // style={isMobile ? { right: `${slide.position}px` } : null}
           style={
             isMobile
               ? {

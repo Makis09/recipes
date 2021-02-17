@@ -130,7 +130,11 @@ export default function Home({
       </Head>
       <Carousel />
       <Container>
-        <Grid container spacing={3} style={{ position: "relative" }}>
+        <Grid
+          container
+          spacing={3}
+          style={{ position: "relative", overscrollBehavior: "contain" }}
+        >
           <Filters
             handleTouchStart={handleTouchStart}
             handleTouchMove={handleTouchMove}
