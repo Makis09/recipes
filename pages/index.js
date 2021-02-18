@@ -120,7 +120,7 @@ export default function Home({
       const mq = match("(pointer:coarse)");
       setIsmobile(mq.matches);
     }
-  }, []);
+  }, [window.matchMedia, window.msMatchMedia]);
 
   return (
     <>
