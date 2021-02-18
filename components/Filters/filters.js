@@ -49,10 +49,10 @@ function filters(props) {
           <span
             className={classes.slide}
             onTouchStart={(touchStartEvent) =>
-              handleTouchStart(touchStartEvent)
+              handleTouchStart(touchStartEvent), {passive: false}
             }
-            onTouchMove={(touchMoveEvent) => handleTouchMove(touchMoveEvent)}
-            onTouchEnd={(e) => handleTouchEnd(e)}
+            onTouchMove={(touchMoveEvent) => handleTouchMove(touchMoveEvent), {passive: false}}
+            onTouchEnd={(e) => handleTouchEnd(e), {passive: false}}
           >
             <Arrows slide={slide} />
             Filter recipes
