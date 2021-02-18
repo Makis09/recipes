@@ -58,8 +58,6 @@ export default function Home({
   }, [activeFilters]);
 
   const handleTouchStart = useCallback((event) => {
-    event.preventDefault();
-    event.stopPropagation();
     const startedAt = Math.round(event.touches[0].clientX);
     dispatch({
       type: "START",
@@ -67,8 +65,6 @@ export default function Home({
     });
   }, []);
   const handleTouchMove = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
     const currentPosition = Math.round(event.touches[0].clientX);
     let distanceScrolled = Math.abs(slide.startedScrollingAt - currentPosition);
     if (slide.filtersOpened && currentPosition < slide.startedScrollingAt) {
@@ -90,8 +86,6 @@ export default function Home({
     });
   };
   const handleTouchEnd = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
     const tresholdPassed = slide.distanceScrolled > slide.scrollingDistance / 2;
     const updatedSlideState = {};
     if (slide.filtersOpened) {
